@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankit's Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="#home" data-tooltip="Go to Home">Home</a></li>
+      <li><a href="#about" data-tooltip="Know About Me">About Me</a></li>
+      <li><a href="#education" data-tooltip="Check Education">Education</a></li>
+      <li><a href="#projects" data-tooltip="View Projects">Projects</a></li>
+      <li><a href="#resume" data-tooltip="Download Resume">Resume</a></li>
+      <li><a href="#contact" data-tooltip="Contact Me">Contact</a></li>
+      <li><a href="#links" data-tooltip="Professional Links">Links</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Home Section -->
+<section id="home" class="section box fade-in-left">
+  <h1>Hi, I'm Ankit</h1>
+  <p>A BCA student passionate about coding, problem-solving, and creating impactful projects.</p>
+</section>
+
+<!-- About Me -->
+<section id="about" class="section box fade-in-right">
+  <h2>About Me</h2>
+  <p>Hi! I’m Ankit, a BCA student passionate about coding in Java and Python. I love solving problems, building projects, and exploring new technologies like AI and Machine Learning. My goal is to create impactful solutions while constantly learning and growing as a developer.</p>
+</section>
+
+<!-- Education Timeline -->
+<section id="education" class="section box fade-in-left">
+  <h2>Education & Qualifications</h2>
+  <div class="timeline">
+    <div class="timeline-item fade-in-right">
+      <div class="timeline-icon">🎓</div>
+      <div class="timeline-content">
+        <h3>Jharkhand Rai University, Namkum, Ranchi, Jharkhand</h3>
+        <p><strong>Degree:</strong> Bachelor of Computer Science</p>
+        <p><strong>Duration:</strong> June 2023 - June 2026</p>
+        <p><strong>CGPA:</strong> 8.0</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-in-right">
+      <div class="timeline-icon">🏫</div>
+      <div class="timeline-content">
+        <h3>Guru Gobind Singh Public School, Kamre, Ranchi, Jharkhand</h3>
+        <p><strong>Degree:</strong> Higher Secondary School</p>
+        <p><strong>Duration:</strong> March 2021 - March 2022</p>
+        <p><strong>Percentage:</strong> 75%</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-in-right">
+      <div class="timeline-icon">🏫</div>
+      <div class="timeline-content">
+        <h3>Guru Gobind Singh Public School, Kamre, Ranchi, Jharkhand</h3>
+        <p><strong>Degree:</strong> Secondary School</p>
+        <p><strong>Duration:</strong> March 2019 - March 2020</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="section box fade-in-right">
+  <h2>Projects</h2>
+  <div class="project-card fade-in-left">
+    <h3>Project 1: Personal Portfolio</h3>
+    <p>A modern portfolio website built using HTML, CSS with blue-purple gradients and interactive timeline.</p>
+  </div>
+  <div class="project-card fade-in-left">
+    <h3>Project 2: Shopping Cart</h3>
+    <p>Developed a Shopping Cart application to manage products, cart, and checkout functionality efficiently.</p>
+    <p>GitHub: <a href="https://github.com/Ankit357-code/Shoppin-cart" target="_blank" class="github-link">View Project</a></p>
+  </div>
+</section>
+
+<!-- Resume Section -->
+<section id="resume" class="section box fade-in-left">
+  <h2>Resume</h2>
+  <a href="resume.pdf" class="resume-link">Download My Resume</a>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section box fade-in-right">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:mrankit1035@gmail.com" class="email-link">mrankit1035@gmail.com</a></p>
+  <p>Phone: <a href="tel:+918789281177" class="phone-link">+91-8789281177</a></p>
+</section>
+
+<!-- Professional Links Section -->
+<section id="links" class="section box fade-in-left">
+  <h2>Professional Links</h2>
+  <ul>
+    <li><a href="https://github.com/Ankit357-code" class="github-link" target="_blank">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/ankit-raj-19546229b" class="linkedin-link" target="_blank">LinkedIn</a></li>
+  </ul>
+</section>
+
+<!-- Footer -->
+<footer class="fade-in-right">
+  <p>&copy; 2025 Ankit. All Rights Reserved.</p>
+</footer>
+
+<!-- Scroll Animation JS -->
+<script>
+const faders = document.querySelectorAll('.fade-in-left, .fade-in-right');
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('in-view');
+    observer.unobserve(entry.target);
+  });
+},{ threshold: 0.2 });
+faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+
+</body>
+</html>
